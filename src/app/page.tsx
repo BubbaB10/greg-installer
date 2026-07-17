@@ -1,37 +1,42 @@
 import styles from './page.module.css'
 
-const CTA_HREF = 'mailto:support@micro-titan.com?subject=Greg%20Setup'
+const CTA_HREF = 'mailto:support@micro-titan.com?subject=Get%20My%20Greg'
 
 const features = [
   {
-    icon: '🧠',
-    title: 'Remembers your context across sessions',
-    desc: 'Greg writes everything important to memory files. Pick up any conversation exactly where you left off — even after restarts.',
-  },
-  {
-    icon: '📬',
-    title: 'Monitors your inbox and flags what matters',
-    desc: 'The support agent triages email every 30 minutes. Urgent items bubble up. Noise stays buried.',
+    icon: '🧬',
+    title: "Spec'd to your specific life",
+    desc: "Before going live, we map your world — your projects, your people, your goals, your rhythms. Greg starts knowing your context, not a generic template.",
   },
   {
     icon: '⚙️',
-    title: 'Runs agents in the background while you focus',
-    desc: 'Security scans, bookkeeping, SEO publishing — all happening automatically while you run your business.',
+    title: 'Works in the background while you focus',
+    desc: 'Scheduled tasks, monitoring, reminders, research — all happening automatically based on what your life actually needs. Not what a generic product decided.',
+  },
+  {
+    icon: '🧠',
+    title: 'Remembers everything that matters',
+    desc: 'Greg writes important context to memory files. Every conversation picks up exactly where the last one left off, even after restarts.',
+  },
+  {
+    icon: '📬',
+    title: 'Reaches you where you already are',
+    desc: "Greg lives in Telegram. No new app to check, no dashboard to remember. It messages you. You message it back.",
   },
 ]
 
-const packs = [
-  { icon: '🔒', name: 'Security Agent', price: '$150', desc: 'Monitors your workspace for exposed credentials and vulnerabilities.' },
-  { icon: '📚', name: 'Bookkeeper Agent', price: '$250', desc: 'Tracks expenses, reconciles Stripe, generates monthly reports.' },
-  { icon: '🔍', name: 'SEO Agent', price: '$200', desc: 'Publishes keyword-targeted articles to your site 3x per week.' },
-  { icon: '📧', name: 'Support Agent', price: '$150', desc: 'Triages your inbox and escalates only what needs you.' },
+const examples = [
+  { icon: '📅', name: 'Schedule & reminders', desc: 'Catches commitments from conversation and turns them into reminders before they slip.' },
+  { icon: '📊', name: 'Business monitoring', desc: 'Watches MRR, flags anomalies, surfaces what needs attention.' },
+  { icon: '🔍', name: 'Research & synthesis', desc: 'Deep-dives a topic and comes back with what you actually need to know.' },
+  { icon: '📧', name: 'Inbox triage', desc: 'Monitors email, escalates only what needs you, buries noise.' },
 ]
 
 const steps = [
-  { num: '1', text: 'Pay the setup fee' },
-  { num: '2', text: 'Schedule a 30-minute call (or async via email)' },
-  { num: '3', text: 'Greg walks you through install — live in under an hour' },
-  { num: '4', text: 'Done' },
+  { num: '1', text: "Tell us about your life — your goals, projects, people, and rhythms" },
+  { num: '2', text: "We build your Greg — spec'd to your specific world, not a template" },
+  { num: '3', text: 'Go live in under an hour via a 30-minute call or async setup' },
+  { num: '4', text: 'Greg handles the background. You handle what only you can do.' },
 ]
 
 export default function Home() {
@@ -41,7 +46,7 @@ export default function Home() {
       <nav className={styles.nav}>
         <div className={styles.navInner}>
           <span className={styles.logo}>Greg</span>
-          <a href={CTA_HREF} className={styles.navCta}>Get Set Up</a>
+          <a href={CTA_HREF} className={styles.navCta}>Get Your Greg</a>
         </div>
       </nav>
 
@@ -49,25 +54,25 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroGlow} aria-hidden />
         <div className={styles.container}>
-          <div className={styles.badge}>AI Chief of Staff</div>
+          <div className={styles.badge}>Personal AI Chief of Staff</div>
           <h1 className={styles.headline}>
-            Meet Greg. Your<br />
-            <span className={styles.accent}>AI Chief of Staff.</span>
+            An assistant for<br />
+            <span className={styles.accent}>however your life unfolds.</span>
           </h1>
           <p className={styles.subheadline}>
-            A personal AI assistant that runs on your computer, connects to your Telegram,
-            and actually remembers things. Built for entrepreneurs.
+            Greg isn&apos;t a generic AI product. It&apos;s a personal assistant spec&apos;d to your specific life —
+            your business, your family, your goals — and it works in the background so nothing slips through the cracks.
           </p>
           <div className={styles.heroCtas}>
             <a href={CTA_HREF} className={styles.ctaPrimary}>
-              Get Set Up &rarr;
+              Get Your Greg &rarr;
             </a>
             <a href="#pricing" className={styles.ctaSecondary}>
               See Pricing
             </a>
           </div>
           <p className={styles.heroNote}>
-            Starter setup &mdash; $500 one-time &bull; Your API key, your data, your machine
+            $500 one-time setup &mdash; personalized to you &bull; Your API key, your data, your machine
           </p>
         </div>
       </section>
@@ -75,8 +80,8 @@ export default function Home() {
       {/* ── Features ── */}
       <section className={styles.section} id="features">
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>What Greg actually does</h2>
-          <p className={styles.sectionSub}>Not a chatbot. A capable operator that handles tasks while you focus.</p>
+          <h2 className={styles.sectionTitle}>What makes Greg different</h2>
+          <p className={styles.sectionSub}>Not a chatbot. Not a template. A capable operator built around your actual life.</p>
           <div className={styles.featureGrid}>
             {features.map((f) => (
               <div key={f.title} className={styles.featureCard}>
@@ -104,46 +109,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Examples ── */}
+      <section className={styles.section} id="examples">
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>What Greg can do for you</h2>
+          <p className={styles.sectionSub}>Every Greg is different — built around what your life actually needs. Here are some examples.</p>
+          <div className={styles.packsGrid}>
+            {examples.map((e) => (
+              <div key={e.name} className={styles.packCard}>
+                <div className={styles.packHeader}>
+                  <span className={styles.packIcon}>{e.icon}</span>
+                  <div>
+                    <div className={styles.packName}>{e.name}</div>
+                  </div>
+                </div>
+                <p className={styles.packDesc}>{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Pricing ── */}
       <section className={styles.section} id="pricing">
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Pricing</h2>
-          <p className={styles.sectionSub}>One-time fees. No subscriptions. Your Anthropic key, your costs.</p>
+          <p className={styles.sectionSub}>One-time setup fee. No subscription. Personalized to you from day one.</p>
 
-          {/* Starter card */}
+          {/* Main card */}
           <div className={styles.starterCard}>
             <div className={styles.starterLeft}>
-              <div className={styles.starterBadge}>Most Popular</div>
-              <h3 className={styles.starterName}>Starter</h3>
-              <p className={styles.starterDesc}>Full installation, personalized persona, basic memory + daily briefing, 30-day email support.</p>
+              <div className={styles.starterBadge}>Get Your Greg</div>
+              <h3 className={styles.starterName}>Full Setup</h3>
+              <p className={styles.starterDesc}>Pre-launch intake call to map your life and goals. Full installation, personalized persona and memory, custom task configuration, and 30-day email support.</p>
             </div>
             <div className={styles.starterRight}>
               <div className={styles.starterPrice}>$500</div>
               <div className={styles.starterFreq}>one-time</div>
-              <a href={CTA_HREF} className={styles.ctaPrimary}>Get Set Up &rarr;</a>
+              <a href={CTA_HREF} className={styles.ctaPrimary}>Get Your Greg &rarr;</a>
             </div>
-          </div>
-
-          {/* Agent packs */}
-          <h3 className={styles.packsTitle}>Agent Packs — Add-ons</h3>
-          <div className={styles.packsGrid}>
-            {packs.map((p) => (
-              <div key={p.name} className={styles.packCard}>
-                <div className={styles.packHeader}>
-                  <span className={styles.packIcon}>{p.icon}</span>
-                  <div>
-                    <div className={styles.packName}>{p.name}</div>
-                    <div className={styles.packPrice}>{p.price} one-time</div>
-                  </div>
-                </div>
-                <p className={styles.packDesc}>{p.desc}</p>
-              </div>
-            ))}
           </div>
 
           {/* Not included */}
           <div className={styles.notIncluded}>
-            <strong>Not included:</strong> Anthropic API costs (you pay Claude directly &mdash; typical usage is ~$5&ndash;20/month).
+            <strong>Not included:</strong> Anthropic API costs (you pay Claude directly &mdash; typical usage is ~$5&ndash;20/month). Additional specialized capabilities can be scoped and added after your initial setup.
           </div>
         </div>
       </section>
@@ -152,10 +161,10 @@ export default function Home() {
       <section className={styles.finalCta}>
         <div className={styles.finalGlow} aria-hidden />
         <div className={styles.container}>
-          <h2 className={styles.finalTitle}>Ready to stop drowning in busywork?</h2>
+          <h2 className={styles.finalTitle}>Ready for an assistant who actually knows your life?</h2>
           <p className={styles.finalSub}>Greg handles the noise. You handle the things only you can do.</p>
           <a href={CTA_HREF} className={styles.ctaPrimary}>
-            Get Set Up &rarr;
+            Get Your Greg &rarr;
           </a>
           <p className={styles.finalContact}>
             Questions? <a href="mailto:support@micro-titan.com" className={styles.emailLink}>support@micro-titan.com</a>
@@ -167,7 +176,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.container}>
           <p>Greg by <strong>Micro Titan LLC</strong> &bull; <a href="mailto:support@micro-titan.com" className={styles.footerLink}>support@micro-titan.com</a></p>
-          <p className={styles.footerNote}>Greg is powered by OpenClaw + Anthropic Claude. You bring your own API key. Your data stays on your machine.</p>
+          <p className={styles.footerNote}>Greg is powered by NanoClaw + Anthropic Claude. You bring your own API key. Your data stays on your machine.</p>
         </div>
       </footer>
     </main>
