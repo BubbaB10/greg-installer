@@ -1,6 +1,6 @@
 import styles from './page.module.css'
 
-const CTA_HREF = 'mailto:support@micro-titan.com?subject=Get%20My%20Greg'
+const CTA_HREF = '/checkout'
 
 const features = [
   {
@@ -136,7 +136,6 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Pricing</h2>
           <p className={styles.sectionSub}>One-time setup fee. No subscription. Personalized to you from day one.</p>
 
-          {/* Main card */}
           <div className={styles.starterCard}>
             <div className={styles.starterLeft}>
               <div className={styles.starterBadge}>Get Your Greg</div>
@@ -150,7 +149,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Not included */}
           <div className={styles.notIncluded}>
             <strong>Not included:</strong> Anthropic API costs (you pay Claude directly &mdash; typical usage is ~$5&ndash;20/month). Additional specialized capabilities can be scoped and added after your initial setup.
           </div>
@@ -176,7 +174,10 @@ export default function Home() {
       <footer className={styles.footer}>
         <div className={styles.container}>
           <p>Greg by <strong>Micro Titan LLC</strong> &bull; <a href="mailto:support@micro-titan.com" className={styles.footerLink}>support@micro-titan.com</a></p>
-          <p className={styles.footerNote}>Greg is powered by NanoClaw + Anthropic Claude. You bring your own API key. Your data stays on your machine.</p>
+          <p className={styles.footerNote}>
+            Greg is powered by NanoClaw + Anthropic Claude. You bring your own API key. Your data stays on your machine. &bull;{' '}
+            <a href="/legal" className={styles.footerLink}>Privacy &amp; Terms</a>
+          </p>
         </div>
       </footer>
     </main>
